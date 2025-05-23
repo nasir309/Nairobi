@@ -22,26 +22,6 @@ Welcome to Nairobi Sports Wear, a dynamic e-commerce storefront dedicated to pro
     *   May be used to fetch product data from a local JSON file or a simple external API.
 *   **(Optional) Product Data:** Product information might be stored in a local `products.json` file or embedded within JavaScript objects.
 
-## Project Structure
-
-A typical file structure for this project might look like this:
-
-nairobi-sports-wear/
-├── index.html          # Main landing page
-├── products.html       # Page to display all products (or dynamically generated)
-├── product-detail.html # Template for single product view (or dynamically generated)
-├── cart.html           # Shopping cart page (or dynamically generated)
-├── css/
-│   └── style.css       # Main stylesheet
-├── js/
-│   ├── main.js         # Main JavaScript file for core logic, DOM manipulation
-│   ├── products.js     # (Optional) For product data or product-specific functions
-│   └── cart.js         # (Optional) For shopping cart logic
-├── images/
-│   ├── logo.png
-│   └── product-images/ # Directory for product images
-└── data/
-    └── products.json   # (Optional) If product data is stored in a JSON file
 
 
 ## Usage
