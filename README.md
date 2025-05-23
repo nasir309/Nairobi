@@ -1,63 +1,58 @@
-# Weather
+# Nairobi Sports Wear - E-commerce Store
 
-# Weather Web Application
-
-A simple and interactive web application to check the current weather conditions for any city around the world. Built using HTML, CSS, and JavaScript, this application fetches weather data from a public API and displays it in a user-friendly interface.
+Welcome to Nairobi Sports Wear, a dynamic e-commerce storefront dedicated to providing a wide selection of sports apparel and gear. This project is built primarily using HTML, CSS, and JavaScript, focusing on a clean user interface and client-side interactions.
 
 ## Features
 
-*   Search for weather by city name.
-*   Displays current temperature, weather description, humidity, and wind speed.
-*   Responsive design for various screen sizes.
-*   Clean and intuitive user interface.
+*   **Product Showcase:** Browse a catalog of sports wear items, including apparel, footwear, and accessories.
+*   **Product Details:** View detailed information for each product.
+*   **Responsive Design:** Optimized for a seamless experience across desktops, tablets, and mobile devices.
+*   **Shopping Cart:** Add items to a cart and manage your selections (client-side).
+*   **Search & Filter:** Basic client-side functionality to search or filter products.
+*   **Interactive UI:** Engaging user interface powered by JavaScript for dynamic content updates and interactions.
 
 ## Technologies Used
 
-*   **HTML5:** For the structure of the web page.
-*   **CSS3:** For styling and layout.
-*   **JavaScript:** For fetching data from the weather API and handling user interactions.
-*   **Weather API:** (Mention the specific API you used, e.g., OpenWeatherMap, WeatherAPI.com, etc. - *You'll need to replace this placeholder*).
+*   **HTML5:** Provides the fundamental structure and semantic markup for all web pages.
+*   **CSS3:** Used for all styling aspects, including layout (e.g., Flexbox, Grid), typography, colors, and ensuring the site is responsive.
+*   **Vanilla JavaScript (ES6+):**
+    *   Handles all client-side logic and interactivity.
+    *   Manages DOM manipulation for dynamic content updates (e.g., displaying products, updating the cart).
+    *   Implements features like the shopping cart, search/filter functionality.
+    *   May be used to fetch product data from a local JSON file or a simple external API.
+*   **(Optional) Product Data:** Product information might be stored in a local `products.json` file or embedded within JavaScript objects.
 
-## Setup
+## Project Structure
 
-To run this project locally, follow these steps:
+A typical file structure for this project might look like this:
 
-1.  **Clone the repository:**
-    ```bash
-    git clone <repository-url> # Replace with your repository URL
-    ```
-2.  **Navigate to the project directory:**
-    ```bash
-    cd Weather
-    ```
-3.  **Obtain an API Key:**
-    *   Go to the website of the weather API you are using (e.g., OpenWeatherMap).
-    *   Sign up for a free account and obtain an API key.
-4.  **Configure the API Key:**
-    *   Open the `script.js` file (or wherever your JavaScript code is located).
-    *   Find the section where the API key is used and replace the placeholder with your actual API key. It might look something like this:
-        ```javascript
-        const apiKey = "YOUR_API_KEY"; // Replace with your actual API key
-        ```
-5.  **Open the `index.html` file:**
-    *   Simply open the `index.html` file in your preferred web browser.
+```
+nairobi-sports-wear/
+├── index.html          # Main landing page
+├── products.html       # Page to display all products (or dynamically generated)
+├── product-detail.html # Template for single product view (or dynamically generated)
+├── cart.html           # Shopping cart page (or dynamically generated)
+├── css/
+│   └── style.css       # Main stylesheet
+├── js/
+│   ├── main.js         # Main JavaScript file for core logic, DOM manipulation
+│   ├── products.js     # (Optional) For product data or product-specific functions
+│   └── cart.js         # (Optional) For shopping cart logic
+├── images/
+│   ├── logo.png
+│   └── product-images/ # Directory for product images
+└── data/
+    └── products.json   # (Optional) If product data is stored in a JSON file
+```
 
 ## Usage
 
-1.  Open the application in your web browser.
-2.  Enter the name of the city you want to check the weather for in the search box.
-3.  Press Enter or click the search button.
-4.  The current weather information for the specified city will be displayed.
+1.  Open the `index.html` file in your web browser.
+2.  Navigate through the website using the links.
+3.  Browse the product listings.
+4.  Click on a product to view more details.
+5.  Add desired items to your shopping cart.
+6.  View and manage items in your shopping cart.
 
-## Contributing
 
-If you'd like to contribute to this project, please feel free to fork the repository and submit a pull request.
 
-## License
-
-This project is licensed under the MIT License. (*Create a LICENSE file if you don't have one, or change this line if you use a different license*).
-
-## Acknowledgements
-
-*   Thanks to the provider of the Weather API for the data.
-*   (Add any other acknowledgements, e.g., for icons, fonts, tutorials, etc.)
