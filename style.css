@@ -98,7 +98,7 @@ main{
     margin: 20px;
     padding: 20px;
     margin-top: 50px;
-    height: ;
+    
 }
 .hero{
     padding: 20px;
@@ -113,8 +113,9 @@ main{
     filter: brightness(1.0);
     border-radius: 6px;
     margin-top: 3%;
-    display: grid;
-    grid-template-columns: none;
+    display: contents;
+    justify-content: center;
+    align-items: center;
 }
 .hero-content h1{
     text-align: center;
@@ -133,6 +134,11 @@ main{
   display: flex;
   justify-content: space-around;
 }
+.team{
+    margin-top: 5%;
+    display: flex;
+  justify-content: space-around;
+}
 .card {
   margin-top: 20px;
   transition: 0.3s;
@@ -148,8 +154,8 @@ main{
 
 }
 .card:hover {
-    transform: translateY(-10px); /* Makes the card slide upwards by 10px */
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Optional: enhance shadow for a "lifted" effect */
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); 
 }
 
 .card img{
