@@ -244,5 +244,11 @@ footer {
     color: #ff6b6b;
     transform: 0.3 ease;
 }
-
-
+.seccion-list{
+    display: block;
+    align-items: center;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}

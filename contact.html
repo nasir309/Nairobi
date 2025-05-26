@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>XYZ Fitness</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style3.css">
     <script src="https://kit.fontawesome.com/f74487c3ae.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -16,21 +17,98 @@
                 <li><a href="#">Contact</a></li>
             </ul>
     </header>
-    <main>
+    <main class="main">
+        <div class="container">
+        <form id="event-form">
+            <h1>Book</h1>
 
-    </main>
-       <footer>
-          <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="contact.html">Contact</a>
+            <label for="name">Name</label>
+            <input type="text" id="name" required>
+
+            <label for="session-date">Date</label>
+            <input type="date" id="session-date" required>
+
+            <label for="session-time">Time</label>
+            <input type="time" id="session-time" required>
+
+            <label for="session-type">Session Type</label>
+            <select name="session" id="session-type" required>
+                <option value="yoga">Yoga Instructor</option>
+                <option value="nutrition">Nutritionist</option>
+                <option value="boxing">Boxing Instructor</option>
+                <option value="sauna">Sauna</option>
+                <option value="massage">Massage</option>
+            </select>
+
+            <button type="submit" id="add-event-button">BOOK</button>
+        </form>
+
+        <div class="event-list-container">
+            <h2>Session List</h2>
+            <ul id="event-list">
+                </ul>
+            <button id="delete-button">Delete All Sessions</button>
         </div>
-        <div class="social-links">
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-        <p>&copy; 2023 XYZ FITNESS. All rights reserved.</p>
-        </footer>
+    </div>
+      </main>
+         <script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const eventForm = document.getElementById('event-form');
+          const eventNameInput = document.getElementById('name');
+          const sessionDateInput = document.getElementById('session-date');
+          const sessionTimeInput = document.getElementById('session-time');
+          const sessionTypeSelect = document.getElementById('session-type');
+          const eventList = document.getElementById('event-list');
+          const deleteAllButton = document.getElementById('delete-button');
+
+          
+          function addEventToList(name, date, time, typeText) {
+              const listItem = document.createElement('li');
+              
+              
+              const formattedDate = new Date(date).toLocaleDateString('en-US', {
+                  year: 'numeric', month: 'long', day: 'numeric'
+              });
+              
+              
+              const displayTime = time; 
+
+              listItem.textContent = `${name} - ${typeText} on ${formattedDate} at ${displayTime}`;
+              eventList.appendChild(listItem);
+          }
+
+          // Handle form submission
+          eventForm.addEventListener('submit', (event) => {
+              event.preventDefault(); // Prevent the default form submission (page reload)
+
+              // Get values from the form inputs
+              const eventName = eventNameInput.value.trim();
+              const sessionDate = sessionDateInput.value;
+              const sessionTime = sessionTimeInput.value;
+              const sessionTypeValue = sessionTypeSelect.value; // e.g., "yoga"
+              const sessionTypeText = sessionTypeSelect.options[sessionTypeSelect.selectedIndex].text; // e.g., "Yoga Instructor"
+
+              // Basic validation: ensure all fields are filled
+              if (eventName && sessionDate && sessionTime && sessionTypeValue) {
+                  addEventToList(eventName, sessionDate, sessionTime, sessionTypeText);
+                  eventForm.reset(); // Clear the form fields after successful submission
+              } else {
+                  alert('Please fill in all fields.');
+              }
+          });
+
+          // Handle "Delete All Sessions" button click
+          deleteAllButton.addEventListener('click', () => {
+              if (eventList.children.length > 0) {
+                  // Confirm with the user before deleting
+                  if (confirm('Are you sure you want to delete all sessions?')) {
+                      eventList.innerHTML = ''; // Remove all list items
+                  }
+              } else {
+                  alert('There are no sessions to delete.');
+              }
+          });
+      });
+    </script>
 </body>
 </html>
