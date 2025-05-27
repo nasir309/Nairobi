@@ -251,3 +251,103 @@ footer {
 h1{
     text-align: center;
 }
+@media screen {
+    .navbar{
+        display: none;
+    }
+    #menu{
+        display: block;
+    }
+    .header.active .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        text-align: center;
+    }
+    .header.active .navbar a{
+        margin: 1rem;
+    }
+    .hero-content h1{
+        font-size: 1.5rem;
+    }
+    .hero-content p{
+        font-size: 1.0rem;
+    }
+    .categories, .team, .services{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    .social-links{
+        flex-direction: column;
+    }
+    .social-links a{
+        margin-bottom: 10px;
+    }
+    .footer-links{
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+}
+@media screen and (min-width: 768px)  {
+    .navbar{
+        display: flex;
+    }
+    #menu{
+        display: none;
+    }
+    .header.active .navbar{
+        position: static;
+        display: flex;
+        flex-direction: row;
+        background: transparent;
+        backdrop-filter: none;
+    }
+    .header.active .navbar a{
+        margin: 0 4rem;
+    }
+   
+    .hero-content h1{
+        font-size: 2.5rem;
+    }
+    .hero-content p{
+        font-size: 2.0rem;
+    }
+    
+    .categories, .team, .services{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .card{
+        width: calc(33.33% - 2rem);
+        margin-bottom: 0;
+    }
+    h3{
+        font-size: 2.5rem;
+    }
+    .social-links{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .social-links a{
+        margin-bottom: 0;
+    }
+    .footer-links{
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+}
+

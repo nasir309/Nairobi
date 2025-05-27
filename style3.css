@@ -139,3 +139,240 @@ select{
 .main{
     margin-top: 5%;
 }
+@media screen and (max-width: 768px)  {
+      
+    .container {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+    #event-form {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .event-list-container {
+        width: 100%;
+        height: auto;
+    }
+    h1 {
+        text-align: center;
+    }
+    label {
+        grid-column: span 1;
+    }
+    
+}
+@media screen and (max-width: 480px)  {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    label {
+        font-size: 1.2rem;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    textarea,
+    select {
+        font-size: 0.9rem;
+    }
+    button,
+    #delete-button {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+}
+@media screen and (max-width: 375px)   {
+       
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    label {
+        font-size: 1rem;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    textarea,
+    select {
+        font-size: 0.8rem;
+    }
+    button,
+    #delete-button {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+    
+}
+@media screen and (max-width: 320p )  {
+    
+    h1 {
+        font-size: 1.6rem;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    label {
+        font-size: 0.9rem;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    textarea,
+    select {
+        font-size: 0.7rem;
+    }
+    button,
+    #delete-button {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+    
+}
+@media screen and (max-width: 280px)   {
+    h1 {
+        font-size: 1.4rem;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    label {
+        font-size: 0.8rem;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    textarea,
+    select {
+        font-size: 0.6rem;
+    }
+    button,
+    #delete-button {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+    
+    
+}
+@media screen and (max-width: 240px)   {
+    h1 {
+        font-size: 1.2rem;
+    }
+    h2 {
+        font-size: 0.9rem;
+    }
+    label {
+        font-size: 0.7rem;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    textarea,
+    select {
+        font-size: 0.5rem;
+    }
+    button,
+    #delete-button {
+        font-size: 0.6rem;
+        padding: 3px 6px;
+    }
+}
+@media screen and (max-width: 200px)    {
+    
+   h1 {
+        font-size: 1rem;
+    }
+    h2 {
+        font-size: 0.8rem;
+    }
+    label {
+        font-size: 0.6rem;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    textarea,
+    select {
+        font-size: 0.4rem;
+    }
+    button,
+    #delete-button {
+        font-size: 0.5rem;
+        padding: 2px 4px;
+    }
+}
+@media screen and (max-width: 180px)   { h1 {
+        font-size: 0.8rem;
+    }
+    h2 {
+        font-size: 0.7rem;
+    }
+    label {
+        font-size: 0.5rem;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    textarea,
+    select {
+        font-size: 0.3rem;
+    }
+    button,
+    #delete-button {
+        font-size: 0.4rem;
+        padding: 1px 2px;
+    }
+    
+
+}
+@media screen and (max-width: 160px)   {
+    h1 {
+        font-size: 0.6rem;
+    }
+    h2 {
+        font-size: 0.6rem;
+    }
+    label {
+        font-size: 0.4rem;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    textarea,
+    select {
+        font-size: 0.2rem;
+    }
+    button,
+    #delete-button {
+        font-size: 0.3rem;
+        padding: 0.5px 1px;
+    }
+}
+@media screen and (max-width: 140px)   {
+    h1 {
+        font-size: 0.4rem;
+    }
+    h2 {
+        font-size: 0.5rem;
+    }
+    label {
+        font-size: 0.3rem;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    textarea,
+    select {
+        font-size: 0.1rem;
+    }
+    button,
+    #delete-button {
+        font-size: 0.2rem;
+        padding: 0.25px 0.5px;
+    }
+}
