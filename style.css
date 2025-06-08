@@ -188,6 +188,14 @@ main{
 
    
 }
+
+.card-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .card button a{
     color: white;
     text-decoration: none;
